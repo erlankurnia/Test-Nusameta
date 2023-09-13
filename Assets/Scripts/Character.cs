@@ -21,10 +21,6 @@ public class Character : MonoBehaviour
 
     public void Init(int _index, bool autoPlay = true) {
         index = _index;
-        if (autoPlay) Play();
-    }
-
-    public void Play() {
-        onPlay(index);
+        if (autoPlay) onPlay(index);
     }
 }
