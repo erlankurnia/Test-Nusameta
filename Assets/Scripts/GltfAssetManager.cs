@@ -24,15 +24,12 @@ public class GltfAssetManager : MonoBehaviour {
 
     private async void GetGLTFFileCallback(bool success, byte[] results) {
         if (success) {
-            // First step: load glTF
             var gltf = new GLTFast.GltfImport();
             success = await gltf.Load(results);
 
             if (success) {
-                // Here you can customize the post-loading behavior
                 Debug.Log("Success! gltf file is loaded");
 
-                // Instantiate each of the glTF's scenes
                 for (int sceneId = 0; sceneId < gltf.SceneCount; sceneId++) {
                     var clips = gltf.GetAnimationClips();
                     List<string> clipsName = new();
@@ -51,7 +48,12 @@ public class GltfAssetManager : MonoBehaviour {
                             await gltf.InstantiateMainSceneAsync(rootObject);
                             
                             Character ch = rootObject.gameObject.AddComponent<Character>();
-                            ch.Init(objectsGrid.x * y + x, clipsName.ToArray());
+                            ch.onPlay += (int index) => {
+                                string animName = clipsName[0];
+                                if (index < clipsName.Count) animName = clipsName[index];
+                                ch.Anim.Play(animName);
+                            };
+                            ch.Init(objectsGrid.x * y + x);
                         }
                     }
                 }

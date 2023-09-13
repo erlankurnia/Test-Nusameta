@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Character : MonoBehaviour
 {
-    private int index = 0;
-    private string[] clipsName;
+    public delegate void OnPlay(int index);
 
+    private int index = 0;
+    
     private Animation anim;
     public Animation Anim {
         get {
@@ -15,19 +17,14 @@ public class Character : MonoBehaviour
         }
     }
 
-    public void Init(int _index, string[] _clipsName = null) {
-        index = _index;
-        if (_clipsName != null) clipsName = _clipsName;
-        if (Anim.playAutomatically) Play();
-    }
+    public OnPlay onPlay;
 
-    public void SetClips(string[] _clipsName) {
-        clipsName = _clipsName;
+    public void Init(int _index, bool autoPlay = true) {
+        index = _index;
+        if (autoPlay) Play();
     }
 
     public void Play() {
-        string animName = clipsName[0];
-        if (index < clipsName.Length) animName = clipsName[index];
-        Anim.Play(animName);
+        onPlay(index);
     }
 }
