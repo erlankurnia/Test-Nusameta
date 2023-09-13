@@ -89,7 +89,7 @@ public class WWWHandler : MonoBehaviour {
                     yield break;
                 } else {
                     currentTIme += Time.unscaledDeltaTime;
-                    Debug.Log("CurrentTime: " + currentTIme);
+                    //Debug.Log("CurrentTime: " + currentTIme);
                 }
                 yield return null;
             }

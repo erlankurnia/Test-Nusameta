@@ -1,0 +1,157 @@
+{
+	"info": {
+		"_postman_id": "05ae4bbc-f818-436d-a9be-a7c0c5181314",
+		"name": "Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11323836"
+	},
+	"item": [
+		{
+			"name": "Test API",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://dev-uploader.nusameta.com/api/storage/test/35e7d6d9-c75b-4768-ad0b-1fd4369cc729",
+					"protocol": "https",
+					"host": [
+						"dev-uploader",
+						"nusameta",
+						"com"
+					],
+					"path": [
+						"api",
+						"storage",
+						"test",
+						"35e7d6d9-c75b-4768-ad0b-1fd4369cc729"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Test API",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://dev-uploader.nusameta.com/api/storage/test/35e7d6d9-c75b-4768-ad0b-1fd4369cc729",
+							"protocol": "https",
+							"host": [
+								"dev-uploader",
+								"nusameta",
+								"com"
+							],
+							"path": [
+								"api",
+								"storage",
+								"test",
+								"35e7d6d9-c75b-4768-ad0b-1fd4369cc729"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "raw",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 12 Sep 2023 11:53:55 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/octet-stream"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "x-powered-by",
+							"value": "Express"
+						},
+						{
+							"key": "access-control-allow-origin",
+							"value": "http://localhost:3002"
+						},
+						{
+							"key": "vary",
+							"value": "Origin"
+						},
+						{
+							"key": "x-served-by",
+							"value": "dev-uploader.nusameta.com"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=fcOtHjk3Zy2pOJBYE1WnVkDGWBE5JJfq1t26XHamTCzBfIqLGBsvH7ATzGV17jy1YgmdeIRY%2FQ%2BtnjrNGYSXDt4mGQEVRvTYFQtpXR0XIoQEYbK5eO%2FTZJX9bKKE8TtYFF%2BI9UEhhYIZTGKo\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains; preload"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "8057f3e14f275997-IAD"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiJ9.eyJSb2xlIjoiQWRtaW4iLCJJc3N1ZXIiOiJJc3N1ZXIiLCJVc2VybmFtZSI6IkphdmFJblVzZSIsImV4cCI6MTY5MzM5MTA2NiwiaWF0IjoxNjkzMzkxMDY2fQ.cZp8l8dlrce_hJbFSO4LnYGe1wfVNSJwpVC2xB3z26Q",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
